@@ -6,7 +6,7 @@
   "license": "MPL-2.0",
   "private": true,
   "scripts": {
-    "lint": "npx eslint ./*.ts",
+    "lint": "npx eslint ./**/*.ts",
     "fix": "npx eslint --fix ./**/*.ts",
     "get": "cdktf get",
     "build": "tsc",
@@ -27,9 +27,11 @@
     "constructs": "10.1.177"
   },
   "devDependencies": {
+    "@types/current-git-branch": "^1.1.3",
     "@types/jest": "29.2.3",
     "@types/node": "18.11.10",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "current-git-branch": "^1.1.0",
     "eslint": "^8.29.0",
     "eslint-config-standard-with-typescript": "^23.0.0",
     "eslint-plugin-import": "^2.26.0",
