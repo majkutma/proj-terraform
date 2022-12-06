@@ -1,10 +1,9 @@
 // Copyright (c) HashiCorp, Inc
 // SPDX-License-Identifier: MPL-2.0
-import { App, TerraformStack } from 'cdktf'
-import { AwsProvider } from '@cdktf/provider-aws/lib/provider'
+import { App } from 'cdktf'
 import { getBranchName, getStackId } from './utils/param-utils'
 import { STACK_ID_DEFAULT } from './constants/proj-info'
-import { myBucket } from './components/s3-buckets'
+import { MyStack } from './components/tf-stacks'
 
 const app = new App()
 
@@ -19,21 +18,6 @@ console.log(' On branch: ', branchName)
 console.log(' Please review the stack name: ', stackId)
 // console.log(' Region: ', region, ' Profile: ', profile)
 console.log('-----------------------------------------------------')
-
-class MyStack extends TerraformStack {
-  constructor (scope: App, id: string) {
-    super(scope, id)
-
-    new AwsProvider(this, 'AWS', {
-      sharedCredentialsFiles: ['/Users/fvg3843/.aws/credentials'],
-      profile: 'private',
-      region: 'us-east-1'
-    })
-
-    // Creating myBucket bucket
-    myBucket(this)
-  }
-}
 
 new MyStack(app, stackId)
 app.synth()
