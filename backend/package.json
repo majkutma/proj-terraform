@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "lint": "npx eslint ./src/*",
-    "fix": "npx eslint --fix ./src/*",
+    "lint": "npx eslint ./**/**/src/*",
+    "fix": "npx eslint --fix ./**/**/src/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
