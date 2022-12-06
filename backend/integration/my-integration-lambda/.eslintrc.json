@@ -9,7 +9,7 @@
     "parserOptions": {
         "ecmaVersion": 2022,
         "project": "tsconfig.json",
-        "tsconfigRootDir": "C:/Users/fvg3843/PROJECTS/PROJ/proj-demo/backend/integration/my-integration-lambda",
+        "tsconfigRootDir": "C:/Users/fvg3843/PROJECTS/PROJ/proj-terraform/backend/integration/my-integration-lambda",
         "sourceType": "module"
     },
     "rules": {
