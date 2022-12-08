@@ -1,4 +1,3 @@
-
 import { App, TerraformStack } from 'cdktf'
 import { AwsProvider } from '@cdktf/provider-aws/lib/provider'
 import { myBucket } from './s3-buckets'
